@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura de Compra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        #factura-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #004080;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer h2 {
+            margin-top: 10px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        button, .btn {
+            padding: 12px 24px;
+            background-color: #004080;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, .btn:hover {
+            background-color: #003366;
+        }
+
+        .container-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .line {
+            border-top: 2px solid #004080;
+            margin: 20px 0;
+        }
+
+        .detalles {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .detalles span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="factura-container">
+        <header>
+            <img src="image.png" alt="Logo de la Empresa" id="empresa-logo">
+            <h1>Factura de Compra</h1>
+            <p>Fecha: <span id="fecha"></span></p>
+            <p>Factura N°: <span id="numero-factura"></span></p>
+            <p>Cliente N°: <span id="cliente-factura"></span></p>
+            <p>Método de pago: <span id="metodo-pago"></span></p>
+        </header>
+
+        <section id="productos-lista">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="productos-tbody">
+                    <!-- Productos se llenarán dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+
+        <div class="line"></div>
+
+        <footer>
+            <div class="detalles">
+                <p>Total: $<span id="total"></span></p>
+            </div>
+            <div class="container-btn">
+                <button onclick="window.print()">Imprimir</button>
+                <a href="index.html" class="btn">Volver al inicio</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="factura.js"></script>
+</body>
+</html>

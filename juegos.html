@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #004080;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .game-section img {
+            width: 410px; /* Tamaño mayor */
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .game-section img:hover {
+            transform: scale(1.05); /* Efecto hover */
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .back-button:hover {
+            background-color: #003366;
+        }
+        .back-button i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sección de Juegos</h1>
+        <!-- Grid de juegos -->
+        <div class="row text-center">
+            <!-- Juego Scratch -->
+            <div class="col-md-4 game-section">
+                <h3>Juego de Scratch</h3>
+                <a href="scratch.html">
+                    <img src="https://howilearnedcode.com/wp-content/uploads/2018/01/scratch-howilearnedcode.jpg" alt="Juego Scratch">
+                </a>
+            </div>
+            <!-- Juego App Inventor -->
+            <div class="col-md-4 game-section">
+                <h3> Gestion App Inventor</h3>
+                <a href="https://ai2.appinventor.mit.edu/?locale=es_ES#5359796188413952" target="_blank">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/11/2f/81/112f81c7-5227-9209-7887-3944e26e43de/AppIcon-0-1x_U007emarketing-0-7-0-0-sRGB-85-220-0.png/1200x630wa.png" 
+                         alt="App Inventor Game">
+                </a>
+            </div>
+            <!-- Juego Kahoot -->
+            <div class="col-md-4 game-section">
+                <h3>Juego de Kahoot</h3>
+                <a href="https://create.kahoot.it/share/quiz-optimal-inventory-solutions/7be4aed2-cdc5-445b-bbcc-dc8cffe6c924" target="_blank">
+                    <img src="https://www.fundacioncanal.com/canaleduca/wp-content/uploads/2020/05/kahoot.jpg" 
+                         alt="Kahoot Game">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Volver -->
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Volver
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

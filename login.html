@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Login - Optimal Inventory Solutions</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #007bff, #6f42c1);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #333;
+        }
+
+        .login-container .form-control {
+            margin-bottom: 15px;
+        }
+
+        .login-container .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .login-container .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+        .login-container .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 576px) {
+            .login-container {
+                margin: 50px 20px;
+                padding: 30px;
+            }
+
+            .logo img {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="image.png" alt="Optimal Inventory Solutions">
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Ingrese su usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        </form>
+
+        <div class="footer">
+            <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+            <a href="index.html">Volver</a>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        
+        const users = JSON.parse(localStorage.getItem('users')) || [
+            { usuario: "usuario1", password: "password123", nombre: "Juan Pérez" },
+            { usuario: "cristian123", password: "123", nombre: "Cristian Guerrero" }
+        ];
+
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+           
+            const usuario = document.getElementById('usuario').value;
+            const password = document.getElementById('password').value;
+
+            const user = users.find(u => u.usuario === usuario && u.password === password);
+
+            if (user) {
+               
+                alert("Login exitoso. Bienvenido, " + user.nombre);
+                localStorage.setItem("loggedInUser", JSON.stringify(user)); 
+                window.location.href = "index.html";
+            } else {
+                
+                alert("Credenciales incorrectas. Intenta nuevamente.");
+            }
+        });
+    </script>
+
+</body>
+</html>

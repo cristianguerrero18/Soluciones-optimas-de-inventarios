@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Optimal Inventory Solutions</title>
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">OPTIMAL INVENTOR</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="login.html">Registrarse</a></li>
+                    <li><a href="juegos.html">Juegos</a></li>
+                </ul>
+            </nav>
+           <div>
+    <ul>
+        <li class="submenu">
+            
+            <img id="icono-carrito" src="comercio-electronico.png" alt="car" style="cursor: pointer;">
+
+           
+            <div id="carrito" style="display: none;"> 
+                <table id="lista_carrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Eliminar</th> 
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+              
+                <a href="#" id="vaciar-carrito" class="btn-3" >Vaciar Carrito</a>  
+                <a href="#" id="comprar-productos" class="btn-3">Realizar Compra</a>
+            </div>
+        </li>
+    </ul>
+</div>
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <span> Bienvenido a nuestra tienda de licencias de gestores de inventario</span>
+                <h1>Ofertas Especiales</h1>
+                <p>Optimiza tu control de inventarios y potencia la eficiencia de tu negocio con nuestras licencias exclusivas de software de gestión de inventarios. Por tiempo limitado, accede a descuentos especiales y beneficios adicionales para mejorar tus procesos y maximizar la rentabilidad de tu empresa.</p>
+                <div class="buttons">
+                    <a href="login.html" class="btn-1">informacion</a>
+                    <a href="catalogo.html" class="btn-1">Leer mas</a>
+                </div>
+            </div>
+            <div class="header-img">
+                <img src="image.png"  alt="">
+            </div>
+        </div>
+    </header>
+    
+    <section class="oferts container">
+        <div class="ofert-1 b1">
+            <div class="ofert-img">
+                <img src="https://www.hostingplus.com.co/wp-content/uploads/2024/07/Analisis-neo-banco-Square.jpg" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Square</h3>
+                <a href="javascript:void(0)" class="toggle-info" onclick="toggleInfo('info-1')">&#8595; Leer más</a>
+                <div class="info" id="info-1" style="display: none;">
+                    <p>Hoy estamos en promoción: ¡50% de descuento en este producto!</p>
+                </div>
+            </div>
+        </div>        
+        <div class="ofert-1 b2">
+            <div class="ofert-img">
+                <img src="https://media.licdn.com/dms/image/D4D12AQEcBhJNjOSWGg/article-cover_image-shrink_600_2000/0/1694600725344?e=2147483647&v=beta&t=NcLo1LBGOtUPIaEU0nppIg6cCrbZevuIZPzGWWcDo_A" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Odoo</h3>
+                <a href="javascript:void(0)" class="toggle-info" onclick="toggleInfo('info-2')">&#8595; Leer más</a>
+                <div class="info" id="info-2" style="display: none;">
+                    <p>Hoy estamos en promoción: ¡50% de descuento en este producto!</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="ofert-1 b3">
+            <div class="ofert-img">
+                <img src="https://www.comparasoftware.co/media/6644"  alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Ordoro</h3>
+                <a href="javascript:void(0)" class="toggle-info" onclick="toggleInfo('info-3')">&#8595; Leer más</a>
+                <div class="info" id="info-3" style="display: none;">
+                    <p>Hoy estamos en promoción: ¡50% de descuento en este producto!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="Products container">
+        <h2>Productos</h2>
+        <div class="box-container" id="lista-1">
+            <div class="box">
+                <img src="https://play-lh.googleusercontent.com/UZQeorPpWfNRA23FMQY5ONlZ_7cbSE2o3pwgloJMBWenZIdU7TM7wJlKrChZa6XzyXQ"  alt="">
+                <div class="Product-txt">
+                    <h3>Zoho Inventory</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$249</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al Carrito</a>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOB4uKM868UXpRi7ngdXWVPdpVd5G4MEF_zw&s"  alt="">
+                <div class="Product-txt">
+                    <h3>Inflow</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$439</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al Carrito</a>
+                </div>     
+            </div>
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyOUOw16QrnVXLThH5-INtkMKVtD2JEBkjA&s"alt="">
+                <div class="Product-txt">
+                    <h3>Cin7</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$325</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al Carrito</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://www.nopcommerce.com/images/thumbs/0020096_netsuite-erp.png" alt="">
+                <div class="Product-txt">
+                    <h3>NetSuite ERP</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$999</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al Carrito</a>
+                </div>  
+            </div>
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbERcJgBgbBn-ap-3vMqQsLY3fgWIctlX4vg&s" alt="">
+                <div class="Product-txt">
+                    <h3>Tradegecko</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$755</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al Carrito</a>
+                </div>  
+            </div>
+            <div class="box">
+                <img src="https://media.licdn.com/dms/image/D4D12AQEcBhJNjOSWGg/article-cover_image-shrink_600_2000/0/1694600725344?e=2147483647&v=beta&t=NcLo1LBGOtUPIaEU0nppIg6cCrbZevuIZPzGWWcDo_A" alt="">
+                <div class="Product-txt">
+                    <h3>Odoo</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$455</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al Carrito</a>
+                </div>  
+            </div>
+            <div class="box">
+                <img src="https://www.comparasoftware.com/media/1970" alt="">
+                <div class="Product-txt">
+                    <h3>Square Retail</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">$655</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al Carrito</a>
+                </div>  
+            </div>
+            <div class="box">
+                <img src="https://dearsystems.com.cn/wp-content/uploads/2019/02/release-notes-logo-400x250.jpg" alt="">
+                <div class="Product-txt">
+                    <h3>Dear</h3> 
+                    <p> Licencia Premium</p>
+                    <p class="precio">
+                        <span class="precio-anterior">$382</span>
+                        <p class="precio-actual">$325</p>
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al Carrito</a>
+                </div>  
+            </div>
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbhOo-ZnSW-yUTp8maOHNJcYATh7UOz0yeQ&s" alt="">
+                <div class="Product-txt">
+                    <h3>Katana</h3>
+                    <p>Licencia Premium</p>
+                    <p class="precio">
+                        <span class="precio-anterior">$253</span>
+                        <p class="precio-actual">$190</p>
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al Carrito</a>
+                </div>
+            </div>    
+            <div class="box">
+                <img src="https://www.comparasoftware.co/media/6644" alt="">
+                <div class="Product-txt">
+                    <h3>Ordoro</h3>
+                    <p>Licencia Premium</p>
+                    <p class="precio">
+                        <span class="precio-anterior">$200</span>
+                        <p class="precio-actual">$150</p>
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al Carrito</a>
+                </div>
+            </div>        
+            <div class="box">
+                <img src="https://pbs.twimg.com/profile_images/1125907224419655680/g6qkzqhu_400x400.png" alt="">
+                <div class="Product-txt">
+                    <h3>UnleashedSof</h3>
+                    <p>Licencia Premium</p>
+                    <p class="precio">
+                        <span class="precio-anterior">$293</span>
+                        <p class="precio-actual">$249</p>
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al Carrito</a>
+                </div>
+            </div>      
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKF3phYFXMSK2N2deY11esBYSXTlt_asxWsQ&s" alt="">
+                <div class="Product-txt">
+                    <h3>BusinessOne</h3>
+                    <p>Licencia Premium</p>
+                    <p class="precio">
+                        <span class="precio-anterior">$384</span>
+                        <p class="precio-actual">$288</p>
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al Carrito</a>
+                </div>
+            </div>   
+            <div class="box">
+                <img src=" https://play-lh.googleusercontent.com/oWWPj8MTRjarVT1S7OG-R-4DMtWp1YjIQ2X81dwA0VOu3iTh9iq_frQqwKtF_gVzS5k" alt="">
+                <div class="Product-txt">
+                    <h3>EZOffice</h3>
+                    <p>Licencia Premium</p>
+                    <p class="precio">
+                        <span class="precio-anterior">$517</span>
+                        <p class="precio-actual">$444</p>
+                    </p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="13">Agregar al Carrito</a>
+                </div>
+            </div>  
+
+        </div>
+        <div class="btn-2" id="load-more">Cargar mas</div>
+    </main>
+
+    <section class="Testimonio container">
+        <h2>¿Qué opinan los clientes?</h2>
+        <div class="testimonial-content">
+            <div class="testimonial-1">
+                <p>
+                    "Excelente servicio, la atención fue muy personalizada y el producto superó mis expectativas. Sin duda volveré a comprar. ¡Altamente recomendados!"
+                </p>
+                <img src="https://static.vecteezy.com/system/resources/previews/009/663/927/non_2x/5-star-rating-review-star-transparent-free-png.png" width="200px" alt="Estrella de calificación">
+                <h4>Juan Pérez</h4>
+            </div>
+            <div class="testimonial-1">
+                <p>
+                    "Muy contenta con la compra. La calidad de los productos es increíble, y el proceso de entrega fue rápido y eficiente. Definitivamente volveré a ser clienta."
+                </p>
+                <img src="https://static.vecteezy.com/system/resources/previews/009/663/927/non_2x/5-star-rating-review-star-transparent-free-png.png" width="200px" alt="Estrella de calificación">
+                <h4>María López</h4>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="nosotros.html">Nuestra historia</a></li>
+                    <li><a href="nosotros.html">Misión y visión</a></li>
+                    <li><a href="nosotros.html">Equipo</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Servicios</h3>
+                <ul>
+                    <li><a href="servicios.html">Consultoría</a></li>
+                    <li><a href="servicios.html">Desarrollo de productos</a></li>
+                    <li><a href="servicios.html">Atención al cliente</a></li>
+                    <li><a href="servicios.html">Soporte técnico</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="mailto:cjavierguerrero@uts.edu.co">Email : cjavierguerrero@uts.edu.co</a></li>
+                    <li><a href="tel:+316482494">Teléfono : 316482494</a></li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <li><a href="#">Ubicación : Bucaramanga-Santander</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

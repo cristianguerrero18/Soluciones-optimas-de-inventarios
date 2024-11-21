@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Optimal Inventory Solutions</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos base */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-out;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #004080;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 150px;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h2 {
+            color: #004080;
+            font-size: 28px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #004080;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 22px;
+            margin: 15px 0 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Botón */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #004080;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Video */
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Animación fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Secciones con margen */
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <img src="image.png" alt="Optimal Inventory Solutions">
+    </header>
+
+    <!-- Contenido principal -->
+    <section class="container">
+        <!-- Sección: Nuestra Historia -->
+        <div id="nuestra-historia" class="section">
+            <h2>Nuestra Historia</h2>
+            <p>Optimal Inventory Solutions nació como un proyecto académico en la carrera de Sistemas Informáticos de las UTS. Nuestro objetivo es optimizar la gestión de inventarios para pequeñas y medianas empresas, ofreciendo soluciones tecnológicas que simplifican la administración, mejoran la eficiencia operativa y reducen costos. Además de desarrollar herramientas personalizadas, también somos distribuidores de licencias de software de empresas reconocidas, garantizando calidad y confianza en cada solución implementada. Con esto, buscamos impulsar la transformación digital de nuestros clientes, ayudándolos a adoptar tecnologías innovadoras para fortalecer su competitividad en el mercado..</p>
+        </div>
+
+        <!-- Sección: Misión y Visión -->
+        <div id="mision-vision" class="section">
+            <h2>Misión y Visión</h2>
+            <h3>Misión</h3>
+            <p>Proporcionar herramientas tecnológicas innovadoras que optimicen la gestión de inventarios, mejoren procesos y generen un impacto positivo en nuestros clientes.</p>
+            <h3>Visión</h3>
+            <p>Ser líderes globales en soluciones de gestión de inventarios, desarrollando software de calidad que apoye el crecimiento de empresas de todos los tamaños.</p>
+        </div>
+
+        <!-- Sección: Equipo -->
+        <div id="equipo" class="section">
+            <h2>Equipo</h2>
+            <p>Contamos con un equipo multidisciplinario de profesionales en Sistemas Informáticos, especializados en desarrollo de software, análisis de datos y atención al cliente. Nos comprometemos a ofrecer soluciones de alto impacto para nuestros clientes.</p>
+        </div>
+
+        <!-- Sección: Video -->
+        <div class="section">
+            <h2>Conoce más sobre nosotros</h2>
+            <video controls>
+                <source src="LucasCasual.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+
+        <!-- Botón de regreso -->
+        <a href="index.html" class="btn">Volver al inicio</a>
+    </section>
+
+    <!-- Script para animación -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.8) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

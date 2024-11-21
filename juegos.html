@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+      
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #004080;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: #004080;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .game-section img {
+            width: 100%; /* Ajuste automático para columnas */
+            max-width: 400px; /* Máximo ancho */
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .game-section img:hover {
+            transform: translateY(-10px) scale(1.1); /* Animación más llamativa */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            margin-top: 15px;
+            font-size: 1.3rem;
+            color: #004080;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        h3:hover {
+            color: #0066cc; /* Cambia el color en hover */
+        }
+
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #003366;
+            transform: scale(1.1); /* Ampliación del botón al pasar el cursor */
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+
+        .game-section {
+            transition: transform 0.3s ease;
+        }
+
+        .game-section:hover {
+            transform: translateY(-5px); /* Elevar la sección */
+        }
+
+        /* Efecto de entrada con animación */
+        .row.text-center {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sección de Juegos</h1>
+        <!-- Grid de juegos -->
+        <div class="row text-center">
+            <!-- Juego Scratch -->
+            <div class="col-md-4 game-section">
+                <h3>Juego de Scratch</h3>
+                <a href="scratch.html">
+                    <img src="https://howilearnedcode.com/wp-content/uploads/2018/01/scratch-howilearnedcode.jpg" alt="Juego Scratch">
+                </a>
+            </div>
+            <!-- Juego App Inventor -->
+            <div class="col-md-4 game-section">
+                <h3>Gestión App Inventor</h3>
+                <a href="https://ai2.appinventor.mit.edu/?locale=es_ES#5359796188413952" target="_blank">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/11/2f/81/112f81c7-5227-9209-7887-3944e26e43de/AppIcon-0-1x_U007emarketing-0-7-0-0-sRGB-85-220-0.png/1200x630wa.png" 
+                         alt="App Inventor Game">
+                </a>
+            </div>
+            <!-- Juego Kahoot -->
+            <div class="col-md-4 game-section">
+                <h3>Juego de Kahoot</h3>
+                <a href="kahoot.html" target="_blank">
+                    <img src="https://www.fundacioncanal.com/canaleduca/wp-content/uploads/2020/05/kahoot.jpg" 
+                         alt="Kahoot Game">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Volver -->
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Volver
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

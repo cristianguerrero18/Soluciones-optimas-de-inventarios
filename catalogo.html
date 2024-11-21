@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #e9f0f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .catalogo-container {
+            width: 80%;
+            max-width: 900px;
+            height: 700px;
+            perspective: 1500px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .catalogo {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            transition: transform 0.8s;
+        }
+
+        .pagina {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            backface-visibility: hidden;
+            visibility: hidden;
+        }
+
+        .pagina:nth-child(1) {
+            background-image: url('1.png');
+            visibility: visible;
+        }
+
+        .pagina:nth-child(2) {
+            background-image: url('2.png');
+        }
+
+        .pagina:nth-child(3) {
+            background-image: url('3.png');
+        }
+
+        .botones {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+        }
+
+        button {
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005BBB;
+            transform: scale(1.05);
+        }
+
+        button:disabled {
+            background-color: #c2d3e2;
+            cursor: not-allowed;
+        }
+
+        #volver {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #005BBB;
+            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #volver:hover {
+            background-color: #00408a;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" id="volver">Volver</a>
+    <div class="catalogo-container">
+        <div class="catalogo">
+            <div class="pagina"></div>
+            <div class="pagina"></div>
+            <div class="pagina"></div>
+        </div>
+        <div class="botones">
+            <button id="prev" disabled>← Anterior</button>
+            <button id="next">Siguiente →</button>
+        </div>
+    </div>
+
+    <script>
+        const paginas = document.querySelectorAll('.pagina');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentPage = 0;
+
+        function updatePages() {
+            paginas.forEach((pagina, index) => {
+                pagina.style.visibility = index === currentPage ? 'visible' : 'hidden';
+            });
+
+            prevButton.disabled = currentPage === 0;
+            nextButton.disabled = currentPage === paginas.length - 1;
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage < paginas.length - 1) {
+                currentPage++;
+                updatePages();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updatePages();
+            }
+        });
+
+        updatePages();
+    </script>
+</body>
+</html>
